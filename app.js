@@ -5,6 +5,6 @@ import r from "./routes/tranRoutes.js";
 const app = express();
 app.use(bodyParser.json());
 app.use("/api/v1/translate", r);
-app.listen(5000, () => {
+app.listen(env.port||5000, () => {
 	console.log("running");
 });
